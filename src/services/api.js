@@ -1,6 +1,8 @@
 import axios from 'axios';
 
-const API_BASE_URL = 'https://backend-d8os.onrender.com/api';
+// Use Vite environment variable for the API base URL in development/production
+// Create a `.env` file with VITE_API_BASE_URL if you need to point to a different backend.
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'https://backend-d8os.onrender.com/api';
 
 // Create axios instance
 const api = axios.create({
